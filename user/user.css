@@ -31,13 +31,15 @@ button {
 	justify-content: space-between;
 }
 
-.header h1 {
+.header h1  {
 	color: white;
 }
 .header-nav a {
 	color: white;
 	font-size: 20px;
 	margin: 0 20px;
+	text-decoration: none;
+
 }
 
 #select {
@@ -54,7 +56,7 @@ button {
 
 .header-search input {
 width: 400px;
-height: 25px;
+height: 35px;
 	padding: 5px 20px;
 	border-radius: 10px;
 	outline: none;
@@ -66,7 +68,7 @@ height: 25px;
 	border-radius: 10px;
 	border: none;
 	outline: none;
-	color: blue;
+	color: rgb(66, 117, 165);
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -80,10 +82,15 @@ img{
     width: 150px;
     height: 150px;
 }
+.user{
+	display: flex;
+	flex-wrap: wrap ;
+	flex-direction: column;
+}
 .d{
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: darkslategrey;

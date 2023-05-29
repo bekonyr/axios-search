@@ -1,0 +1,9 @@
+.btn-breed{
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 4px;
+    background-color: rgb(71, 50, 50);
+    color: aliceblue;
+    cursor: pointer;
+}

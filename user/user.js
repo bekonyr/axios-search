@@ -18,7 +18,7 @@ getAPI("all");
 
 function view(data){
     data.map(el => {
-        title.innerHTML += `<div class="container "> 
+        title.innerHTML += `<div class=" d  "> 
             <img src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt="img" /> 
 
         <h1 style="color: #fff ; font-size: 20px;">  ${el.name} </h1>

@@ -38,11 +38,11 @@ function view(data) {
 }
 
 btn.addEventListener("click", () => {
-	getAPI(`name/${input.value}`);
+	getAPI(`name/${input.value.trim()}`);
 });
 
 input.addEventListener("input", (e) => {
-	getAPI(`name/${e.target.value}`);
+	getAPI(`name/${e.target.value.trim()}`);
 });
 
 area.addEventListener("change", (e) => {
