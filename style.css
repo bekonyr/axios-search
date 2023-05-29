@@ -40,7 +40,7 @@ button {
 	margin: 0 20px;
 }
 
-.filter {
+#select {
 	width: 150px;
 	height: 40px;
 	padding: 5px;
@@ -53,10 +53,13 @@ button {
 
 
 .header-search input {
-	padding: 10px 30px;
+width: 400px;
+height: 25px;
+	padding: 5px 20px;
 	border-radius: 10px;
 	outline: none;
 	border: none;
+	font-size: 20px;
 }
 .header-search button {
 	padding: 10px 20px;

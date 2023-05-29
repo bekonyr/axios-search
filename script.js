@@ -3,7 +3,8 @@
 const hero = document.querySelector(".hero");
 const input = document.querySelector("input");
 const btn = document.querySelector("button");
-const select = document.querySelector("select");
+const region = document.querySelector(".region");
+const area = document.querySelector(".area");
 
 let all = null;
 // https://restcountries.com/v3.1/all
@@ -14,7 +15,6 @@ function getAPI(API) {
 		all = res.data;
 		console.log(res.data);
 		view(all);
-		alphabet();
 	});
 }
 getAPI("all");
@@ -45,26 +45,35 @@ input.addEventListener("input", (e) => {
 	getAPI(`name/${e.target.value}`);
 });
 
-select.addEventListener("change", (e) => {
+area.addEventListener("change", (e) => {
 	let target = e.target.value;
-	
+
 	if (target === "area") {
-		all.sort((a, b) => b.area - a.area);
-		view(all);
+		const res = all.sort((a, b) => b.area - a.area);
+		view(res);
 	} else if (target === "population") {
-		all.sort((a, b) => b.population - a.population);
-		view(all);
+		const res = all.sort((a, b) => b.population - a.population);
+		view(res);
 	} else if (target === "A-Z") {
-		alphabet()
+		const res = all.sort((a, b) => a.name.common.localeCompare(b.name.common));
+		view(res);
 	} else if (target === "Z-A") {
-	    all.sort((a, b) => b.name.common.localeCompare(a.name.common));
-		view(all);
-	}else{
-        getAPI(`region/${target}`)
-    }
+		const res = all.sort((a, b) => b.name.common.localeCompare(a.name.common));
+		view(res);
+	}
 });
 
-function alphabet() {
-    all.sort((a, b) => a.name.common.localeCompare(b.name.common));
-		view(all);
-}
+
+region.addEventListener("change", (e) => {
+	let target = e.target.value;
+	if (target === "africa") {
+		const res = all.filter((el) => el.region === "Africa");
+		view(res);
+	} else if (target === "europe") {
+		const res = all.filter((el) => el.region === "Europe");
+		view(res);
+	} else if (target === "asia") {
+		const res = all.filter((el) => el.region === "Asia");
+		view(res);
+	}
+});
