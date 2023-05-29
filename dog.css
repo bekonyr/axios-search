@@ -1,9 +1,46 @@
+.flex{
+    display: flex;
+    /* flex-direction: column-reverse; */
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.breeds{
+    padding: 60px 0;
+    width: 900px;
+
+   
+    display: flex;
+     flex-wrap: wrap;
+    /* flex-direction: column  ; */
+    justify-content: start;
+    align-items: start;
+
+}
+
+
+
 .btn-breed{
-    padding: 10px 20px;
+    display: flex;
+    justify-content: start;
+    border: none;
+    padding: 5px 10px;
+    width: 140px;
     font-size: 15px;
     border-radius: 10px;
     margin: 4px;
-    background-color: rgb(71, 50, 50);
-    color: aliceblue;
+    background-color: rgb(29, 142, 152);
+    color: rgb(4, 49, 72);
     cursor: pointer;
+    font-size: 20px;
+}
+
+select{
+    border-radius: 10px;
+    font-size: 20px;
+    color: #226f89;
+    padding: 5px 20px;
+    outline: none;
+
 }

@@ -11,7 +11,8 @@ let all = null;
 // https://restcountries.com/v3.1/name/{name}
 
 function getAPI(API) {
-	axios(`https://restcountries.com/v3.1/${API}`).then((res) => {
+	axios(`https://restcountries.com/v3.1/${API}`)
+	.then((res) => {
 		all = res.data;
 		console.log(res.data);
 		view(all);

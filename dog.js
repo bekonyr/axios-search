@@ -2,6 +2,10 @@
 const breeds = document.querySelector(".breeds")
 const breedImg = document.querySelector(".breedImg")
 const option = document.querySelector(".dog")
+const search = document.querySelector(".search")
+const input = document.querySelector(".input")
+
+
 function getAll() {
     axios(`https://dog.ceo/api/breeds/list/all`)
 .then((res) => {
@@ -30,7 +34,8 @@ function getImg(name){
         })
 }
 getImg()
-function opt() {
+
+function optDog() {
     axios(`https://dog.ceo/api/breeds/list/all`)
 .then((res) => {
         Object.keys(res.data.message).map(el => {
@@ -38,10 +43,30 @@ function opt() {
         })
     })
 }
+optDog()
 
-opt()
-option.addEventListener("click", (e)=>{
+
+function opClick() {
+
+
+option.addEventListener("change", (e)=>{
     const option = event.target.value
     getImg(option)
 
 })
+}
+opClick()
+
+
+
+search.addEventListener('click', () => {
+    getImg(`${input.value.trim()}`)
+})
+
+
+function searchInput(){
+    input.addEventListener('input'  , () =>{
+        getImg(`${input.value.trim()}`)
+    })
+}
+searchInput()
